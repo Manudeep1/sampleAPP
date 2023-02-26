@@ -1,7 +1,9 @@
 package com.example.sampletest
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.view.View
 import androidx.fragment.app.FragmentTransaction
@@ -48,7 +50,8 @@ class MainActivity : AppCompatActivity()  {
         })
         viewModel.getPost()
 
-
+        val intent = Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)
+        startActivity(intent)
 
 
 
